@@ -1,0 +1,70 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "taddly",
+  "title": "Taddly",
+  "description": "Quick access to the Taddly Focus App",
+  "icon": "taddly.png",
+  "author": "afomera",
+  "categories": [
+    "Applications",
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "start-timer",
+      "title": "Start Timer",
+      "subtitle": "Taddly",
+      "description": "Resume current timer",
+      "keywords": ["start", "play"],
+      "mode": "no-view"
+    },
+    {
+      "name": "toggle-timer",
+      "title": "Toggle Timer",
+      "subtitle": "Taddly",
+      "description": "Toggles the current timer",
+      "mode": "no-view"
+    },
+    {
+      "name": "pause-timer",
+      "title": "Pause Timer",
+      "subtitle": "Taddly",
+      "description": "Pauses the current timer",
+      "mode": "no-view"
+    },
+    {
+      "name": "skip-session",
+      "title": "Skip Session",
+      "subtitle": "Taddly",
+      "description": "Skips the current session",
+      "mode": "no-view"
+    },
+    {
+      "name": "reset-timer",
+      "title": "Reset Timer",
+      "subtitle": "Taddly",
+      "description": "Reset the current timer",
+      "mode": "no-view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.69.1",
+    "run-applescript": "^7.0.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/node": "20.8.10",
+    "@types/react": "18.2.27",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}

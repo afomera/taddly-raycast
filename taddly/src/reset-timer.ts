@@ -1,0 +1,21 @@
+import { showHUD, Toast, environment } from "@raycast/api";
+import { isTaddlyInstalled, resetTimer } from "./utils";
+
+export default async function () {
+  const toast = new Toast({
+    title: "Resetting timer",
+    style: Toast.Style.Animated,
+  });
+
+  toast.show();
+
+  if (!environment.isDevelopment && !(await isTaddlyInstalled())) {
+    toast.title = "Taddly not installed";
+    toast.message = "Install it from: https://taddly.app/download/";
+    toast.style = Toast.Style.Failure;
+    return;
+  }
+
+  await resetTimer();
+  await showHUD("Timer toggled");
+}
